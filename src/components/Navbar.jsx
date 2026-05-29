@@ -20,10 +20,12 @@ export default function Navbar() {
         rounded-full
         border
         border-white/10
+        shadow-lg
         "
       >
         {[
           "about",
+          "case-study",
           "skills",
           "projects",
           "contact",
@@ -40,15 +42,13 @@ export default function Navbar() {
             rounded-full
             cursor-pointer
             capitalize
-
             hover:bg-cyan-500
             hover:text-black
-
-            transition
+            transition-all
             duration-300
             "
           >
-            {item}
+            {item.replace("-", " ")}
           </Link>
         ))}
       </div>
